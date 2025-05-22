@@ -1,31 +1,31 @@
-import { deUnNumero, fizzbuzz } from "./fizzbuzz";
+import { calcularElFizzBuzzDeUnNumero, fizzbuzz } from "./fizzbuzz";
 
 describe("Fizzbuzz de un numero", () => {
   it("Numero sin regla", () => {
-    expect(deUnNumero(1)).toEqual("1");
+    expect(calcularElFizzBuzzDeUnNumero(1)).toEqual("1");
   });
 
   it("Regla de Fizz para 3", () => {
-    expect(deUnNumero(3)).toEqual("Fizz");
+    expect(calcularElFizzBuzzDeUnNumero(3)).toEqual("Fizz");
   });
 
   it("Regla de Buzz para 5", () => {
-    expect(deUnNumero(5)).toEqual("Buzz");
+    expect(calcularElFizzBuzzDeUnNumero(5)).toEqual("Buzz");
   });
 
   it("Regla de Fizz para multiplos de 3", () => {
-    expect(deUnNumero(6)).toEqual("Fizz");
-    expect(deUnNumero(9)).toEqual("Fizz");
+    expect(calcularElFizzBuzzDeUnNumero(6)).toEqual("Fizz");
+    expect(calcularElFizzBuzzDeUnNumero(9)).toEqual("Fizz");
   });
 
   it("Regla de Buzz para multiplos de 5", () => {
-    expect(deUnNumero(10)).toEqual("Buzz");
-    expect(deUnNumero(20)).toEqual("Buzz");
+    expect(calcularElFizzBuzzDeUnNumero(10)).toEqual("Buzz");
+    expect(calcularElFizzBuzzDeUnNumero(20)).toEqual("Buzz");
   });
 
   it("Regla FizzBuzz para multiplos de 3 y 5", () => {
-    expect(deUnNumero(15)).toEqual("FizzBuzz");
-    expect(deUnNumero(30)).toEqual("FizzBuzz");
+    expect(calcularElFizzBuzzDeUnNumero(15)).toEqual("FizzBuzz");
+    expect(calcularElFizzBuzzDeUnNumero(30)).toEqual("FizzBuzz");
   });
 
   describe("Fizzbuzz de una secuencia", () => {
