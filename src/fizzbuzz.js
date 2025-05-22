@@ -1,12 +1,12 @@
 function calcularElFizzBuzzDeUnNumero(n) {
   let fb = "";
-  if (esMultiploDe3(n) && esMultiploDe5(n)) {
+  if (esMultiploDe(n, 3) && esMultiploDe(n, 5)) {
     fb = "FizzBuzz";
   } else {
-    if (esMultiploDe3(n)) {
+    if (esMultiploDe(n, 3)) {
       fb = "Fizz";
     } else {
-      if (esMultiploDe5(n)) {
+      if (esMultiploDe(n, 5)) {
         fb = "Buzz";
       } else {
         fb = n.toString();
@@ -15,12 +15,8 @@ function calcularElFizzBuzzDeUnNumero(n) {
   }
   return fb;
 }
-function esMultiploDe3(n) {
-  return n % 3 === 0;
-}
-
-function esMultiploDe5(n) {
-  return n % 5 === 0;
+function esMultiploDe(n, multiplo) {
+  return n % multiplo === 0;
 }
 
 function fizzbuzz(n) {
